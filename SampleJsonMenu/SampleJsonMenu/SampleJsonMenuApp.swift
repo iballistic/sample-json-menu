@@ -11,7 +11,8 @@ import SwiftUI
 struct SampleJsonMenuApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let config = AppConfigJson()
+            ContentView().environmentObject(config)
         }
     }
 }

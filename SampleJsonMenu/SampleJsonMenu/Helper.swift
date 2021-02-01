@@ -6,36 +6,22 @@
 //
 
 import Foundation
+import swift_json_menu
+
+public class AppConfigJson : ObservableObject{
+    @Published var data : JSonMenu
+    init() {
+        if let path = FileSystemHelper.pathToFile(inBundle: Bundle.main.bundleIdentifier!, fileName: "menu", fileType: "json"){
+            self.data = try! JSonMenu(jsonFilePath: path)
+            
+        }else{
+            self.data = JSonMenu()
+        }
+    }
+    
+}
 
 public struct FileSystemHelper{
-    
-    public static func fileToJSON(fileName : String, fileType: String) -> [String:Any]?{
-        let filePath =  pathToFile(fileName: fileName, fileType: fileType)
-        if let path = filePath {
-            return FileSystemHelper.fileToJSON(jsonFilePath: path)
-        }
-        return nil
-    }
-    
-   public static func fileToJSON(jsonFilePath : String) -> [String:Any]?{
-        
-        do{
-            print("path to json file \(jsonFilePath)")
-            let content = try? String.init(contentsOfFile: jsonFilePath)
-            if let jsonString = content{
-                let data = jsonString.data(using: .utf8)
-                let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:Any] //NSMutableDictionary
-                return json
-            }
-            
-        }
-        catch{
-            print("error \(error)");
-        }
-        
-        return nil
-        
-    }
     
     public static func pathToFile(inBundle: String, fileName: String, fileType: String) ->String?{
         let dbBundle = Bundle(identifier: inBundle)

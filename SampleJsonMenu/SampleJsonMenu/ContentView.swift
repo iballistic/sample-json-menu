@@ -10,18 +10,17 @@ import swift_json_menu
 
 struct ContentView: View {
     
-    let data = FileSystemHelper.fileToJSON(fileName: "menu", fileType: "json")
+    @EnvironmentObject var config : AppConfigJson
     
     var body: some View {
         let storyBoardName = "reloaddata"
-        let jsonMenu = JSonMenu(collection: data!)
-        let sections = jsonMenu.Section(forStoryboard: storyBoardName)
+        let sections = config.data.Section(forStoryboard: storyBoardName)
         
         NavigationView{
             List{
                 ForEach(sections!, id: \.self){
                     section in
-                    TableSectionUI(jsonMenu: jsonMenu, storyBoard: storyBoardName, section: section)
+                    TableSectionUI(storyBoard: storyBoardName, section: section)
                     
                 }
             }

@@ -9,6 +9,7 @@ import SwiftUI
 import swift_json_menu
 
 struct TableCellUI: View {
+    @EnvironmentObject var config : AppConfigJson
     @State private var enteredText = ""
     var cell : TableCell
     var body: some View {
@@ -27,8 +28,9 @@ struct TableCellUI: View {
 
 struct TableCellUI_Previews: PreviewProvider {
     static let cell = TableCell()
+    static let config = AppConfigJson()
     
     static var previews: some View {
-        TableCellUI(cell: cell)
+        TableCellUI(cell: cell).environmentObject(config)
     }
 }
