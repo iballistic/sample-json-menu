@@ -1,0 +1,2616 @@
+{
+    "storyboard": [
+        {
+            "name": "main",
+            "comment": "Main page",
+            "title": "Main Page"
+        },
+        {
+            "name": "reloaddata",
+            "comment": "A story board is used to define reloading data story board",
+            "title": "Reloading Data"
+        },
+        {
+            "name": "reloadballistic",
+            "comment" : "Non UI based story is used a container to define default ballistic values for the load",
+            "title": "Reloading Ballistic"
+        },
+        {
+            "name": "setting",
+            "comment": "Story board where units cam be customized",
+            "title": "Setting"
+        },
+        {
+            "name": "ballisticdata",
+            "comment": "Ballistic calculation screen - it should include cells from reloaddata and reloadballistic",
+            "title": "Ballistic data"
+        },
+        {
+            "name": "summary",
+            "title": "Summary Page"
+        },
+        {
+            "name": "commentdetail",
+            "title": "Comment Detail"
+        },
+        {
+            "name": "firearmdetail",
+            "title": "Firearm Detail"
+        }
+    ],
+    "section": [
+        {
+            "name": "basic",
+            "order" : 10,
+            "header": "Basic Input",
+            "footer": ""
+        },
+        {
+            "name": "batch",
+            "order" : 20,
+            "header": "Batch Information",
+            "footer": ""
+        },
+        
+        {
+            "name": "bulletinfo",
+            "order" : 30,
+            "header": "Bullet Information",
+            "footer": "Describe your bullet, weight and coefficient"
+        },
+        {
+            "name": "bulletseating",
+            "order" : 40,
+            "header": "Bullet seating",
+            "footer": ""
+        },
+        {
+            "name": "loadinfo",
+            "order" : 50,
+            "header": "Load Information",
+            "footer": "Describe your powder load"
+        },
+        {
+            "name": "primerinfo",
+            "order" : 60,
+            "header": "Primer Information",
+            "footer": ""
+        },
+        {
+            "name": "caseinfo",
+            "order" : 70,
+            "header": "Case Information",
+            "footer": ""
+        },
+        {
+            "name": "caseinfoadvanced",
+            "order" : 80,
+            "header": "Case Information advanced",
+            "footer": ""
+        },
+        {
+            "name": "environment",
+            "order" : 85,
+            "header": "Environment",
+            "footer": "Get current temprature, wind, humidity, pressure and altitude (requires a cellular network)"
+        },
+        {
+            "name": "wind",
+            "order" : 90,
+            "header": "Wind Settings",
+            "footer": ""
+        },
+        {
+            "name": "advanced",
+            "order" : 100,
+            "header": "Advanced Options",
+            "footer": ""
+        },
+        {
+            "name": "firearminfo",
+            "order" : 200,
+            "header": "Firearm info",
+            "footer": "Model, caliber, twist rate etc.\nWarning: all data in this app including firearms information is loaded to Apple iCloud private and secure drive for the backup purposes."
+        },
+        {
+            "name": "performance",
+            "order" : 998,
+            "footer": "",
+            "header": "Performance"
+        },
+        {
+            "name": "info",
+            "order" : 999,
+            "footer": "",
+            "header": "Additional Information"
+        },
+        {
+            "name": "photo",
+            "order" : 1000,
+            "footer": "",
+            "header": "Select a photo"
+        },
+        {
+            "name": "*",
+            "footer": "",
+            "header": "",
+            "order" : 0
+        }
+    ],
+    "cells": [{
+        "format": "",
+        "key": "nameselect",
+        "title": "Enter a name below or select from list",
+        "celltype": "CellSegue",
+        "placeholder": "Select from list",
+        "values": [{
+            "value": "",
+            "type": "default"
+        }],
+    },
+    {
+        "format": "",
+        "key": "firearmselect",
+        "title": "Firearm Select",
+        "celltype": "CellSegue",
+        "placeholder": "Firearm",
+        "values": [{
+            "value": "",
+            "type": "default"
+        }],
+    },
+    {
+        "format": "",
+        "key": "firearm",
+        "title": "Firearm",
+        "celltype": "CellString",
+        "placeholder": "Firearm Summary",
+        "values": [{
+            "value": "",
+            "type": "default"
+        }],
+    },
+    {
+        "format": "",
+        "key": "firearmmanufacturer",
+        "title": "Manufacturer",
+        "celltype": "CellString",
+        "placeholder": "Manufacturer",
+        "values": [{
+            "value": "",
+            "type": "default"
+        }],
+    },
+    {
+        "format": "",
+        "key": "firearmmodel",
+        "title": "Model",
+        "celltype": "CellString",
+        "placeholder": "Model",
+        "values": [{
+            "value": "",
+            "type": "default"
+        }],
+    },
+    {
+        "format": "",
+        "key": "firearmserial",
+        "title": "Serial number",
+        "celltype": "CellString",
+        "placeholder": "Serial number",
+        "values": [{
+            "value": "",
+            "type": "default"
+        }],
+    },
+    {
+        "maxval": "100",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.3f",
+        "key": "firearmweight",
+        "title": "Weight",
+        "celltype": "CellDouble",
+        "placeholder": "Weight",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "pounds",
+            "type": "default",
+            "symbol": "lb"
+        },
+        {
+            "name": "kilograms",
+            "type": "optional",
+            "symbol": "kg"
+        }]
+    },
+    {
+        "format": "",
+        "key": "triggermodel",
+        "title": "Trigger Model",
+        "celltype": "CellString",
+        "placeholder": "Trigger Model",
+        "values": [{
+            "value": "",
+            "type": "default"
+        }],
+    },
+    {
+        "maxval": "10",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.3f",
+        "key": "triggerpull",
+        "title": "Trigger Pull",
+        "celltype": "CellDouble",
+        "placeholder": "Trigger Pull",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "pounds",
+            "type": "default",
+            "symbol": "lb"
+        },
+        {
+            "name": "kilograms",
+            "type": "optional",
+            "symbol": "kg"
+        }]
+    },
+    {
+        "format": "",
+        "key": "firearmaction",
+        "title": "Action",
+        "celltype": "CellString",
+        "placeholder": "Action",
+        "values": [{
+            "value": "bolt",
+            "type": "default"
+        }],
+    },
+    {
+        "maxval": "99",
+        "minval": "1",
+        "maxchar": 5,
+        "format": "%.2f",
+        "key": "riflingtwistrate",
+        "title": "Rifling Twist Rate 1 in",
+        "celltype": "CellDouble",
+        "placeholder": "1 in",
+        "values": [{
+            "value": "10",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        }
+        ]
+    },
+    {
+        "maxval": "99",
+        "minval": "1",
+        "maxchar": 5,
+        "format": "%.2f",
+        "key": "barrellength",
+        "title": "Barrel Length",
+        "celltype": "CellDouble",
+        "placeholder": "",
+        "values": [{
+            "value": "16",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        }
+        ]
+    },
+    {
+        "format": "",
+        "key": "commentselect",
+        "title": "Comments",
+        "celltype": "CellSegue",
+        "placeholder": "Comments",
+        "values": []
+    },
+    {
+        "maxval": "1000000",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.0f",
+        "key": "batchnumber",
+        "title": "Number",
+        "celltype": "CellInt",
+        "placeholder": "Batch Number",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "100000",
+        "minval": "0",
+        "maxchar": 6,
+        "format": "%.0f",
+        "key": "batchcount",
+        "title": "Count",
+        "celltype": "CellInt",
+        "placeholder": "Batch Count",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "100",
+        "minval": "1",
+        "maxchar": 4,
+        "format": "",
+        "key": "interval",
+        "title": "Interval",
+        "celltype": "CellInt",
+        "placeholder": "Enter interval, in yards",
+        "values": [
+            {
+                "value": "1",
+                "type": "optional"
+            },
+            {
+                "value": "5",
+                "type": "optional"
+            },
+            {
+                "value": "10",
+                "type": "default"
+            },
+            {
+                "value": "25",
+                "type": "optional"
+            },
+            {
+                "value": "50",
+                "type": "optional"
+            },
+            {
+                "value": "75",
+                "type": "optional"
+            },
+            {
+                "value": "100",
+                "type": "optional"
+            }],
+        "converter" : [{
+            "name": "yards",
+            "type": "default",
+            "symbol": "yd"
+        },
+        {
+            "name": "meters",
+            "type": "optional",
+            "symbol": "m"
+        }]
+    },
+    {
+        "maxval": "3500",
+        "minval": "100",
+        "maxchar": 4,
+        "format": "",
+        "key": "distance",
+        "title": "Distance to target",
+        "celltype": "CellInt",
+        "placeholder": "Range",
+        "values": [{
+            "value": "500",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "yards",
+            "type": "default",
+            "symbol": "yd"
+        },
+        {
+            "name": "meters",
+            "type": "optional",
+            "symbol": "m"
+        }]
+    },
+    {
+        "minval": "25",
+        "maxval": "200",
+        "maxchar": 4,
+        "format": "",
+        "key": "zero",
+        "title": "Zero distance",
+        "celltype": "CellInt",
+        "placeholder": "Range",
+        "converter" : [{
+            "name": "yards",
+            "type": "default",
+            "symbol": "yd"
+        },
+        {
+            "name": "meters",
+            "type": "optional",
+            "symbol": "m"
+        }
+        ],
+        "values": [
+            {
+                "value": "100",
+                "type": "default"
+            }]
+    },
+    {
+        "maxchar": 7,
+        "maxval": "4600",
+        "minval": "100",
+        "format": "%.2f",
+        "key": "velocity",
+        "title": "Muzzle velocity",
+        "celltype": "CellDouble",
+        "placeholder": "Muzzle velocity",
+        "values": [{
+            "value": "2700",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "footPerSecond",
+            "type": "default",
+            "symbol": "ft/s"
+        },
+        {
+            "name": "metersPerSecond",
+            "type": "optional",
+            "symbol": "m/s"
+        }]
+    },
+    {
+        "maxchar": 7,
+        "maxval": "4600",
+        "minval": "100",
+        "format": "%.2f",
+        "key": "velocitytrue",
+        "title": "True muzzle velocity",
+        "celltype": "CellDouble",
+        "placeholder": "True muzzle velocity",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "footPerSecond",
+            "type": "default",
+            "symbol": "ft/s"
+        },
+        {
+            "name": "metersPerSecond",
+            "type": "optional",
+            "symbol": "m/s"
+        }]
+    },
+    {
+        "maxchar": 32,
+        "format": "",
+        "key": "name",
+        "title": "Name",
+        "celltype": "CellString",
+        "placeholder": "Enter a name for your load",
+        "values": [{
+            "value": "Unnamed",
+            "type": "default"
+        }]
+    },
+    {
+        "maxchar": 32,
+        "format": "",
+        "key": "primerlotnumber",
+        "title": "Lot number",
+        "celltype": "CellString",
+        "placeholder": "Primer lot number",
+        "values": [{
+            "value": "N/A",
+            "type": "default"
+        }]
+    },
+    {
+        "maxchar": 32,
+        "format": "",
+        "key": "caselotnumber",
+        "title": "Lot number",
+        "celltype": "CellString",
+        "placeholder": "Case lot number",
+        "values": [{
+            "value": "N/A",
+            "type": "default"
+        }]
+    },
+    {
+        "maxchar": 32,
+        "format": "",
+        "key": "bulletlotnumber",
+        "title": "Lot number",
+        "celltype": "CellString",
+        "placeholder": "Bullet lot number",
+        "values": [{
+            "value": "N/A",
+            "type": "default"
+        }]
+    },
+    {
+        "maxchar": 32,
+        "format": "",
+        "key": "powderlotnumber",
+        "title": "Lot number",
+        "celltype": "CellString",
+        "placeholder": "Powder lot number",
+        "values": [{
+            "value": "N/A",
+            "type": "default"
+        }]
+    },
+    {
+        "maxchar": 12,
+        "format": "",
+        "key": "bulletmanufacturer",
+        "title": "Manufacturer",
+        "celltype": "CellString",
+        "placeholder": "Enter a name for your load",
+        "values": [{
+            "value": "Sierra",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "0.900",
+        "minval": "0.170",
+        "maxchar": 5,
+        "format": "%.3f",
+        "key": "bulletdiameter",
+        "title": "Diameter",
+        "celltype": "CellDouble",
+        "placeholder": "Bullet diameter",
+        "values": [{
+            "value": "0.308",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        }
+        ]
+    },
+    {
+        "maxval": "5",
+        "minval": "0",
+        "maxchar": 6,
+        "format": "%.4f",
+        "key": "bulletseatingdepth",
+        "title": "Seating Depth",
+        "celltype": "CellDouble",
+        "placeholder": "Bullet Seating Depth",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "8",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.5f",
+        "key": "bulletcomparator",
+        "title": "Comparator Reading",
+        "celltype": "CellDouble",
+        "placeholder": "Comparator Reading",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "8",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.5f",
+        "key": "bulletcoltip",
+        "title": "C.O.L. Tip",
+        "celltype": "CellDouble",
+        "placeholder": "Cartridge Overall Length from tip",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "8",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.5f",
+        "key": "bulletcologive",
+        "title": "C.O.L. Ogive",
+        "celltype": "CellDouble",
+        "placeholder": "Cartridge Overall Length from ogive",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "1000000",
+        "minval": "0",
+        "maxchar": 16,
+        "format": "%.6f",
+        "key": "micrometerseaterdie",
+        "title": "Micrometer Seater Die",
+        "celltype": "CellDouble",
+        "placeholder": "Micrometer Seater Die Setting",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxchar": 24,
+        "format": "",
+        "key": "bulletstyle",
+        "title": "Style",
+        "celltype": "CellString",
+        "placeholder": "Projectile style or type",
+        "values": [{
+            "value": "HPBT",
+            "type": "default"
+        }]
+    },
+    {
+        "format": "",
+        "key": "manufacturerselect",
+        "title": "Select a bullet or enter details below",
+        "celltype": "CellSegue",
+        "placeholder": "Select from list",
+        "values": [{
+            "value": "",
+            "type": "default"
+        }]
+    },
+    {
+        "format": "",
+        "key": "bullettype",
+        "title": "Bullet Type",
+        "celltype": "CellString",
+        "placeholder": "Bullet Type G1 or G7",
+        "values": [{
+            "value": "G1",
+            "type": "default"
+        },
+        {
+            "value": "G7",
+            "type": "optional"
+        }]
+    },
+    {
+        "maxchar": 100,
+        "format": "",
+        "key": "primerselect",
+        "title": "Select a primer or enter details below",
+        "celltype": "CellSegue",
+        "placeholder": "Primer Name Select",
+        "values": []
+    },
+    {
+        "format": "",
+        "maxchar": 24,
+        "key": "primername",
+        "title": "Name",
+        "celltype": "CellString",
+        "placeholder": "Name",
+        "values": [{
+            "value": "#8-1/2-120",
+            "type": "default"
+        }]
+    },
+    {
+        "format": "",
+        "maxchar": 12,
+        "key": "primertype",
+        "title": "Type",
+        "celltype": "CellString",
+        "placeholder": "Type",
+        "values": [{
+            "value": "Large Rifle",
+            "type": "default"
+        }]
+    },
+    {
+        "format": "",
+        "maxchar": 24,
+        "key": "primermanufacturer",
+        "title": "Manufacturer",
+        "celltype": "CellString",
+        "placeholder": "Manufacturer",
+        "values": [{
+            "value": "Winchester",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "1.2",
+        "minval": "0.01",
+        "maxchar": 5,
+        "format": "%.3f",
+        "key": "coefficient",
+        "title": "Coefficient",
+        "celltype": "CellDouble",
+        "placeholder": "Bullet ballistic coefficient",
+        "values": [{
+            "value": "0.419",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "200",
+        "minval": "0",
+        "maxchar": 8,
+        "format": "%.4f",
+        "key": "powderload",
+        "title": "Load",
+        "celltype": "CellDouble",
+        "placeholder": "Powder load",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "grain",
+            "type": "default",
+            "symbol": "gr"
+        },
+        {
+            "name": "milligrams",
+            "type": "optional",
+            "symbol": "mg"
+        },
+        {
+            "name": "grams",
+            "type": "optional",
+            "symbol": "g"
+        }]
+    },
+    {
+        "maxchar": 100,
+        "format": "",
+        "key": "powderselect",
+        "title": "Enter name below or select from list",
+        "celltype": "CellSegue",
+        "placeholder": "Powder Name Select",
+        "values": []
+    },
+    {
+        "maxchar": 100,
+        "format": "",
+        "key": "powdermanufacturer",
+        "title": "Manufacturer",
+        "celltype": "CellString",
+        "placeholder": "Powder Manufacturer",
+        "values": [{
+            "value": "IMR",
+            "type": "default"
+        }]
+    },
+    {
+        "maxchar": 100,
+        "format": "",
+        "key": "powdername",
+        "title": "Name",
+        "celltype": "CellString",
+        "placeholder": "Powder Name",
+        "values": [{
+            "value": "4831",
+            "type": "default"
+        }]
+    },
+    {
+        "maxchar": 100,
+        "format": "",
+        "key": "caseselect",
+        "title": "Select a case manufacturer or enter details below",
+        "celltype": "CellSegue",
+        "placeholder": "Case Manufacturer",
+        "values": []
+    },
+    {
+        "maxchar": 100,
+        "format": "",
+        "key": "casemanufacturer",
+        "title": "Manufacturer",
+        "celltype": "CellString",
+        "placeholder": "Case Manufacturer",
+        "values": [{
+            "value": "Lapua",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "8",
+        "minval": "0",
+        "maxchar": 6,
+        "format": "%.4f",
+        "key": "caselength",
+        "title": "Length",
+        "celltype": "CellDouble",
+        "placeholder": "Case length",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "100",
+        "minval": "0",
+        "maxchar": 4,
+        "format": "%.0f",
+        "key": "numberofshots",
+        "title": "Number of shots",
+        "celltype": "CellInt",
+        "placeholder": "Number of shots",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "100",
+        "minval": "0",
+        "maxchar": 4,
+        "format": "%.0f",
+        "key": "timesloaded",
+        "title": "Times loaded",
+        "celltype": "CellInt",
+        "placeholder": "Times loaded",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "100",
+        "minval": "0",
+        "maxchar": 4,
+        "format": "%.0f",
+        "key": "timestrimmed",
+        "title": "Times trimmed",
+        "celltype": "CellInt",
+        "placeholder": "Times trimmed",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "100",
+        "minval": "0",
+        "maxchar": 4,
+        "format": "%.0f",
+        "key": "timesannealed",
+        "title": "Times annealed",
+        "celltype": "CellInt",
+        "placeholder": "Times annealed",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "1000",
+        "minval": "0",
+        "maxchar": 8,
+        "format": "%.3f",
+        "key": "caseweight",
+        "title": "Weight",
+        "celltype": "CellDouble",
+        "placeholder": "Case Weight",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "grain",
+            "type": "default",
+            "symbol": "gr"
+        },
+        {
+            "name": "grams",
+            "type": "optional",
+            "symbol": "g"
+        }]
+    },
+    {
+        "maxval": "8",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.5f",
+        "key": "casecomparator",
+        "title": "Comparator reading",
+        "celltype": "CellDouble",
+        "placeholder": "Comparator reading",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "8",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.5f",
+        "key": "casecomparatorfired",
+        "title": "Comparator reading fired",
+        "celltype": "CellDouble",
+        "placeholder": "Comparator reading fired",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "8",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.5f",
+        "key": "caseheadspace",
+        "title": "Head space",
+        "celltype": "CellDouble",
+        "placeholder": "Case head space",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "1",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.5f",
+        "key": "caseneckwallthickness",
+        "title": "Neck Wall Thickness",
+        "celltype": "CellDouble",
+        "placeholder": "Neck wall thickness",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "1",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.5f",
+        "key": "casebushingsize",
+        "title": "Bushing size",
+        "celltype": "CellDouble",
+        "placeholder": "Case bushing size",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "1",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.5f",
+        "key": "caseshellholdersize",
+        "title": "Shell holder size",
+        "celltype": "CellDouble",
+        "placeholder": "Case shell holder size",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "maxval": "1000",
+        "minval": "0",
+        "maxchar": 7,
+        "format": "%.2f",
+        "key": "weight",
+        "title": "Weight",
+        "celltype": "CellDouble",
+        "placeholder": "Weight",
+        "values": [{
+            "value": "168",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "grain",
+            "type": "default",
+            "symbol": "gr"
+        },
+        {
+            "name": "milligrams",
+            "type": "optional",
+            "symbol": "mg"
+        },
+        {
+            "name": "grams",
+            "type": "optional",
+            "symbol": "g"
+        }]
+    },
+    {
+        "maxchar": 100,
+        "format": "",
+        "key": "caseresizing",
+        "title": "Resizing",
+        "celltype": "CellString",
+        "placeholder": "Case Manufacturer",
+        "values": [{
+            "value": "N/A",
+            "type": "default"
+        },
+        {
+            "value": "Full",
+            "type": "optional"
+        },
+        {
+            "value": "Neck",
+            "type": "optional"
+        },
+        {
+            "value": "Shoulder",
+            "type": "optional"
+        }]
+    },
+    {
+        "format": "",
+        "key": "winddirection",
+        "title": "Wind Direction",
+        "celltype": "CellString",
+        "placeholder": "Left, Right, Head or Tail",
+        "values": [{
+            "value": "Head",
+            "type": "default"
+        },
+        {
+            "value": "Left",
+            "type": "optional"
+        },
+        {
+            "value": "Right",
+            "type": "optional"
+        },
+        {
+            "value": "Tail",
+            "type": "optional"
+        }]
+    },
+    {
+        "maxval": "70",
+        "minval": "0",
+        "maxchar": 5,
+        "format": "%.2f",
+        "key": "windspeed",
+        "title": "Wind speed",
+        "celltype": "CellDouble",
+        "placeholder": "Wind speed",
+        "values": [{
+            "value": "5",
+            "type": "default"
+        }],
+        "converter": [{
+            "name": "milesPerHour",
+            "type": "default",
+            "symbol": "mph"
+        },
+        {
+            "name": "kilometersPerHour",
+            "type": "optional",
+            "symbol": "km/h"
+        },
+        {
+            "name": "metersPerSecond",
+            "type": "optional",
+            "symbol": "m/s"
+        },
+        {
+            "name": "footPerSecond",
+            "type": "optional",
+            "symbol": "ft/s"
+        }],
+    },
+    {
+        "format": "",
+        "key": "shootingdirection",
+        "title": "Shooting Direction",
+        "defaultvalue": "Uphill",
+        "celltype": "CellString",
+        "placeholder": "Select shooting direction, Uphill or Downhill",
+        "values": [{
+            "value": "Uphill",
+            "type": "default"
+        },{
+            "value": "Downhill",
+            "type": "optional"
+        }]
+    },
+    {
+        "maxchar": 2,
+        "maxval": "90",
+        "minval": "0",
+        "format": "%.0f",
+        "key": "angle",
+        "title": "Shooting angle",
+        "celltype": "CellInt",
+        "placeholder": "Shooting angle",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }]
+    },
+    {
+        "maxchar": 5,
+        "maxval": "40",
+        "minval": "15",
+        "format": "%.2f",
+        "key": "pressure",
+        "title": "Atmospheric pressure",
+        "celltype": "CellDouble",
+        "placeholder": "Atmospheric pressure",
+        "values": [{
+            "value": "29.92",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inchesOfMercury",
+            "type": "default",
+            "symbol": "inHg"
+        },
+        {
+            "name": "millibars",
+            "type": "optional",
+            "symbol": "mbar"
+        },
+        {
+            "name": "bars",
+            "type": "optional",
+            "symbol": "bar"
+        },
+        {
+            "name": "kilopascals",
+            "type": "optional",
+            "symbol": "kPa"
+        },
+        {
+            "name": "hectopascals",
+            "type": "optional",
+            "symbol": "hPa"
+        }]
+    },
+    {
+        "maxchar": 6,
+        "maxval": "100",
+        "minval": "0",
+        "format": "%.2f",
+        "key": "humidity",
+        "title": "Relative humidity %",
+        "celltype": "CellDouble",
+        "placeholder": "Relative humidity %",
+        "values": [{
+            "value": "78",
+            "type": "default"
+        }]
+    },
+    {
+        "maxval": "15000",
+        "minval": "0",
+        "maxchar": 5,
+        "format": "%.0f",
+        "key": "altitude",
+        "title": "Altitude",
+        "celltype": "CellInt",
+        "placeholder": "Altitude",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "feet",
+            "type": "default",
+            "symbol": "ft"
+        },
+        {
+            "name": "meters",
+            "type": "optional",
+            "symbol": "m"
+        },
+        {
+            "name": "kilometers",
+            "type": "optional",
+            "symbol": "kM"
+        }]
+        
+    },
+    {
+        "minval": "0",
+        "maxval": "72",
+        "maxchar": 4,
+        "format": "%.2f",
+        "key": "groupsize",
+        "title": "Group Size",
+        "celltype": "CellDouble",
+        "placeholder": "Group Size",
+        "values": [{
+            "value": "0",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        }]
+    },
+    {
+        "minval": "0.1",
+        "maxval": "4",
+        "maxchar": 4,
+        "format": "%.2f",
+        "key": "sightheight",
+        "title": "Sight height",
+        "celltype": "CellDouble",
+        "placeholder": "Sight height over bore",
+        "values": [{
+            "value": "1.5",
+            "type": "default"
+        }],
+        "converter" : [{
+            "name": "inches",
+            "type": "default",
+            "symbol": "in"
+        },
+        {
+            "name": "centimeters",
+            "type": "optional",
+            "symbol": "cm"
+        },
+        {
+            "name": "millimeters",
+            "type": "optional",
+            "symbol": "mm",
+        },
+        {
+            "name": "micrometers",
+            "type": "optional",
+            "symbol": "µm",
+        }]
+    },
+    {
+        "format": "%.2f",
+        "maxval": "140",
+        "minval": "-40",
+        "maxchar": 6,
+        "key": "temprature",
+        "title": "Temprature",
+        "celltype": "CellDouble",
+        "placeholder": "Temrature",
+        "converter": [{
+            "name": "fahrenheit",
+            "type": "default",
+            "symbol": "\u2109"
+        },
+        {
+            "name": "celsius",
+            "type": "optional",
+            "symbol": "\u2103"
+        }],
+        "values": [{
+            "value": "59",
+            "type": "default"
+        }]
+    },
+    {
+        "order": 0,
+        "rowheight": 88,
+        "maxchar": 256,
+        "format": "",
+        "key": "note",
+        "title": "Notes",
+        "celltype": "CellLargeString",
+        "placeholder": "Notes",
+        "values": [{
+            "value": "",
+            "type": "default"
+        }]
+    },
+    {
+        "format": "",
+        "key": "commentphoto",
+        "title": "Comment Photo",
+        "celltype": "CellPhoto",
+        "rowheight": 320,
+        "placeholder": "",
+        "values": [{
+            "value": "defaultPhoto",
+            "type": "default"
+        }]
+    },
+    {
+        "maxchar": 100,
+        "format": "",
+        "key": "environmentselect",
+        "title": "Get Weather and Altitude",
+        "celltype": "CellSegue",
+        "placeholder": "Get Weather and Altitude",
+        "values": []
+    }],
+    "mapping": [
+        {
+            "storyboard": "firearmdetail",
+            "section": "firearminfo",
+            "cell": "firearmmanufacturer",
+            "readonly": false,
+            "order": 0
+        },
+        {
+            "storyboard": "firearmdetail",
+            "section": "firearminfo",
+            "cell": "firearmmodel",
+            "readonly": false,
+            "order": 10
+        },
+        {
+            "storyboard": "firearmdetail",
+            "section": "firearminfo",
+            "cell": "firearmserial",
+            "readonly": false,
+            "order": 10
+        },
+        {
+            "storyboard": "firearmdetail",
+            "section": "firearminfo",
+            "cell": "triggermodel",
+            "readonly": false,
+            "order": 20
+        },
+        {
+            "storyboard": "firearmdetail",
+            "section": "firearminfo",
+            "cell": "firearmweight",
+            "readonly": false,
+            "order": 10
+        },
+        {
+            "storyboard": "firearmdetail",
+            "section": "firearminfo",
+            "cell": "triggerpull",
+            "readonly": false,
+            "order": 20
+        },
+        {
+            "storyboard": "firearmdetail",
+            "section": "firearminfo",
+            "cell": "firearmaction",
+            "readonly": false,
+            "order": 10
+        },
+        {
+            "storyboard": "firearmdetail",
+            "section": "firearminfo",
+            "cell": "riflingtwistrate",
+            "readonly": false,
+            "order": 10
+        },
+        {
+            "storyboard": "firearmdetail",
+            "section": "firearminfo",
+            "cell": "barrellength",
+            "readonly": false,
+            "order": 10
+        },
+        {
+            "storyboard": "summary",
+            "section": "*",
+            "cell": "distance",
+            "readonly": true,
+            "order": 10
+        },
+        {
+            "storyboard": "summary",
+            "section": "*",
+            "cell": "zero",
+            "readonly": true,
+            "order" : 20
+        },
+        {
+            "storyboard": "summary",
+            "section": "*",
+            "cell": "velocity",
+            "readonly": true,
+            "order": 30
+        },
+        {
+            "storyboard": "summary",
+            "section": "*",
+            "cell": "velocitytrue",
+            "readonly": true,
+            "order": 31
+        },
+        {
+            "storyboard": "summary",
+            "section": "*",
+            "cell": "windspeed",
+            "readonly": true,
+            "order": 40
+        },
+        {
+            "storyboard": "summary",
+            "section": "*",
+            "cell": "temprature",
+            "readonly": true,
+            "order" : 50
+        },
+        {
+            "storyboard": "setting",
+            "section": "bulletinfo",
+            "cell": "weight",
+            "readonly" : false,
+            "order" : 10
+        },
+        {
+            "storyboard": "setting",
+            "section": "bulletinfo",
+            "cell": "bulletdiameter",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "bulletseating",
+            "cell": "bulletcoltip",
+            "readonly" : false,
+            "order" : 10
+        },
+        {
+            "storyboard": "setting",
+            "section": "bulletseating",
+            "cell": "bulletcologive",
+            "readonly" : false,
+            "order" : 20
+        },
+        {
+            "storyboard": "setting",
+            "section": "bulletseating",
+            "cell": "bulletseatingdepth",
+            "readonly" : false,
+            "order" : 30
+        },
+        {
+            "storyboard": "setting",
+            "section": "bulletseating",
+            "cell": "bulletcomparator",
+            "readonly" : false,
+            "order" : 40
+        },
+        {
+            "storyboard": "setting",
+            "section": "bulletseating",
+            "cell": "micrometerseaterdie",
+            "readonly" : false,
+            "order" : 40
+        },
+        {
+            "storyboard": "setting",
+            "section": "loadinfo",
+            "cell": "powderload",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "loadinfo",
+            "cell": "velocity",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "loadinfo",
+            "cell": "velocitytrue",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "caseinfo",
+            "cell": "caseweight",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "caseinfo",
+            "cell": "caselength",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "caseinfoadvanced",
+            "cell": "casecomparator",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "caseinfoadvanced",
+            "cell": "casecomparatorfired",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "caseinfoadvanced",
+            "cell": "caseheadspace",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "caseinfoadvanced",
+            "cell": "caseneckwallthickness",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "caseinfoadvanced",
+            "cell": "casebushingsize",
+            "order": 45,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "caseinfoadvanced",
+            "cell": "caseshellholdersize",
+            "order": 50,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "advanced",
+            "cell": "temprature",
+            "readonly" : false,
+            "order" : 10
+        },
+        {
+            "storyboard": "setting",
+            "section": "advanced",
+            "cell": "sightheight",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "advanced",
+            "cell": "altitude",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "setting",
+            "section": "advanced",
+            "cell": "pressure",
+            "readonly" : false,
+            "order" : 50
+        },
+        {
+            "storyboard": "setting",
+            "section": "wind",
+            "cell": "windspeed",
+            "readonly" : false,
+            "order" : 10
+        },
+        {
+            "storyboard": "setting",
+            "section": "firearminfo",
+            "cell": "firearmweight",
+            "readonly": false,
+            "order": 10
+        },
+        {
+            "storyboard": "setting",
+            "section": "firearminfo",
+            "cell": "triggerpull",
+            "readonly": false,
+            "order": 20
+        },
+        {
+            "storyboard": "setting",
+            "section": "firearminfo",
+            "cell": "riflingtwistrate",
+            "readonly": false,
+            "order": 10
+        },
+        {
+            "storyboard": "setting",
+            "section": "firearminfo",
+            "cell": "barrellength",
+            "readonly": false,
+            "order": 10
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "advanced",
+            "cell": "temprature",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "advanced",
+            "cell": "sightheight",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "advanced",
+            "cell": "altitude",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "advanced",
+            "cell": "humidity",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "advanced",
+            "cell": "pressure",
+            "order" :50,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "advanced",
+            "cell": "angle",
+            "order": 60,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "advanced",
+            "cell": "shootingdirection",
+            "order": 70,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "wind",
+            "cell": "windspeed",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "wind",
+            "cell": "winddirection",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "bulletinfo",
+            "cell": "weight",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "bulletinfo",
+            "cell": "coefficient",
+            "order": 50,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "bulletinfo",
+            "cell": "bullettype",
+            "order": 60,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "bulletinfo",
+            "cell": "manufacturerselect",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "bulletinfo",
+            "cell": "bulletstyle",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "bulletinfo",
+            "cell": "bulletdiameter",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "bulletinfo",
+            "cell": "bulletmanufacturer",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "basic",
+            "cell": "name",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "basic",
+            "cell": "velocity",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "basic",
+            "cell": "zero",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "basic",
+            "cell": "distance",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "basic",
+            "cell": "interval",
+            "order": 50,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "basic",
+            "cell": "nameselect",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "ballisticdata",
+            "section": "info",
+            "cell": "note",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "info",
+            "cell": "note",
+            "order": 999,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletinfo",
+            "cell": "manufacturerselect",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletinfo",
+            "cell": "bulletmanufacturer",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletinfo",
+            "cell": "bulletlotnumber",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletinfo",
+            "cell": "coefficient",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletinfo",
+            "cell": "weight",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletinfo",
+            "cell": "bullettype",
+            "order": 50,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletinfo",
+            "cell": "bulletstyle",
+            "order": 60,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletinfo",
+            "cell": "bulletdiameter",
+            "order": 70,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletseating",
+            "cell": "bulletcoltip",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletseating",
+            "cell": "bulletcologive",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletseating",
+            "cell": "bulletseatingdepth",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletseating",
+            "cell": "bulletcomparator",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "bulletseating",
+            "cell": "micrometerseaterdie",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "basic",
+            "cell": "name",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "basic",
+            "cell": "nameselect",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "basic",
+            "cell": "firearmselect",
+            "order": 30,
+            "readonly": true
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "basic",
+            "cell": "firearm",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "basic",
+            "cell": "commentselect",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "batch",
+            "cell": "batchnumber",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "batch",
+            "cell": "batchcount",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "loadinfo",
+            "cell": "powderselect",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "loadinfo",
+            "cell": "powdermanufacturer",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "loadinfo",
+            "cell": "powdername",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "loadinfo",
+            "cell": "powderload",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "loadinfo",
+            "cell": "velocity",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "primerinfo",
+            "cell": "primerselect",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "primerinfo",
+            "cell": "primermanufacturer",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "primerinfo",
+            "cell": "primername",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "primerinfo",
+            "cell": "primertype",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfo",
+            "cell": "caseselect",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfo",
+            "cell": "casemanufacturer",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfo",
+            "cell": "caselotnumber",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfo",
+            "cell": "caseweight",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfo",
+            "cell": "caseresizing",
+            "order": 50,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfo",
+            "cell": "caselength",
+            "order": 60,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfo",
+            "cell": "timesloaded",
+            "order": 80,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfo",
+            "cell": "timestrimmed",
+            "order": 90,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfo",
+            "cell": "timesannealed",
+            "order": 100,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfoadvanced",
+            "cell": "casecomparator",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfoadvanced",
+            "cell": "casecomparatorfired",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfoadvanced",
+            "cell": "caseheadspace",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfoadvanced",
+            "cell": "caseneckwallthickness",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfoadvanced",
+            "cell": "casebushingsize",
+            "order": 45,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloaddata",
+            "section": "caseinfoadvanced",
+            "cell": "caseshellholdersize",
+            "order": 50,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "bulletinfo",
+            "cell": "bulletmanufacturer",
+            "order": 10,
+            "readonly": true
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "bulletinfo",
+            "cell": "weight",
+            "order": 20,
+            "readonly": true
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "bulletinfo",
+            "cell": "coefficient",
+            "order": 30,
+            "readonly": true
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "bulletinfo",
+            "cell": "bullettype",
+            "order": 40,
+            "readonly": true
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "bulletinfo",
+            "cell": "bulletstyle",
+            "order": 50,
+            "readonly": true
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "bulletinfo",
+            "cell": "bulletdiameter",
+            "order": 60,
+            "readonly": true
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "advanced",
+            "cell": "temprature",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "advanced",
+            "cell": "sightheight",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "advanced",
+            "cell": "altitude",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "advanced",
+            "cell": "humidity",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "advanced",
+            "cell": "pressure",
+            "order" :50,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "advanced",
+            "cell": "angle",
+            "order": 60,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "advanced",
+            "cell": "shootingdirection",
+            "order": 70,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "environment",
+            "cell": "environmentselect",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "wind",
+            "cell": "windspeed",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "wind",
+            "cell": "winddirection",
+            "order": 20,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "basic",
+            "cell": "velocity",
+            "order": 20,
+            "readonly": true
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "basic",
+            "cell": "velocitytrue",
+            "order": 21,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "basic",
+            "cell": "zero",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "basic",
+            "cell": "distance",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "reloadballistic",
+            "section": "basic",
+            "cell": "interval",
+            "order": 50,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "environment",
+            "cell": "environmentselect",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "advanced",
+            "cell": "temprature",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "advanced",
+            "cell": "altitude",
+            "order": 30,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "advanced",
+            "cell": "humidity",
+            "order": 40,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "advanced",
+            "cell": "pressure",
+            "order" :50,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "wind",
+            "cell": "windspeed",
+            "order": 60,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "wind",
+            "cell": "winddirection",
+            "order": 70,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "Performance",
+            "cell": "numberofshots",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "Performance",
+            "cell": "groupsize",
+            "order": 0,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "Performance",
+            "cell": "velocitytrue",
+            "order": 10,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "info",
+            "cell": "note",
+            "order": 999,
+            "readonly": false
+        },
+        {
+            "storyboard": "commentdetail",
+            "section": "photo",
+            "cell": "commentphoto",
+            "order": 1000,
+            "readonly": false
+        }
+    ]
+}
