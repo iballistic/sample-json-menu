@@ -11,7 +11,7 @@ import swift_json_menu
 public class AppConfigJson : ObservableObject{
     @Published var data : JSonMenu
     init() {
-        if let path = FileSystemHelper.pathToFile(inBundle: Bundle.main.bundleIdentifier!, fileName: "menu", fileType: "json"){
+        if let path = FileSystemHelper.pathToFile(inBundle: Bundle.main.bundleIdentifier!, fileName: "test", fileType: "json"){
             self.data = try! JSonMenu(jsonFilePath: path)
             
         }else{

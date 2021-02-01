@@ -13,7 +13,7 @@ struct ContentView: View {
     @EnvironmentObject var config : AppConfigJson
     
     var body: some View {
-        let storyBoardName = "reloaddata"
+        let storyBoardName = "foodmenu"
         let sections = config.data.Section(forStoryboard: storyBoardName)
         
         NavigationView{

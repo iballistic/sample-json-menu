@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		E76FEE8725C67970000D5631 /* TableCellUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76FEE8625C67970000D5631 /* TableCellUI.swift */; };
 		E76FEE8C25C68AC2000D5631 /* TableSectionUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76FEE8B25C68AC2000D5631 /* TableSectionUI.swift */; };
+		E76FEE9025C7C0E9000D5631 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = E76FEE8F25C7C0E9000D5631 /* test.json */; };
 		E798F08F25C4FC2A004A8847 /* SampleJsonMenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798F08E25C4FC2A004A8847 /* SampleJsonMenuApp.swift */; };
 		E798F09125C4FC2A004A8847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798F09025C4FC2A004A8847 /* ContentView.swift */; };
 		E798F09325C4FC2B004A8847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E798F09225C4FC2B004A8847 /* Assets.xcassets */; };
 		E798F09625C4FC2B004A8847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E798F09525C4FC2B004A8847 /* Preview Assets.xcassets */; };
-		E798F09F25C4FC59004A8847 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = E798F09E25C4FC59004A8847 /* menu.json */; };
 		E798F0AE25C514BF004A8847 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798F0AD25C514BF004A8847 /* Helper.swift */; };
 		E798F0B725C543E6004A8847 /* swift-json-menu in Frameworks */ = {isa = PBXBuildFile; productRef = E798F0B625C543E6004A8847 /* swift-json-menu */; };
 /* End PBXBuildFile section */
@@ -21,13 +21,13 @@
 /* Begin PBXFileReference section */
 		E76FEE8625C67970000D5631 /* TableCellUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellUI.swift; sourceTree = "<group>"; };
 		E76FEE8B25C68AC2000D5631 /* TableSectionUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionUI.swift; sourceTree = "<group>"; };
+		E76FEE8F25C7C0E9000D5631 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		E798F08B25C4FC2A004A8847 /* SampleJsonMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleJsonMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E798F08E25C4FC2A004A8847 /* SampleJsonMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleJsonMenuApp.swift; sourceTree = "<group>"; };
 		E798F09025C4FC2A004A8847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E798F09225C4FC2B004A8847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E798F09525C4FC2B004A8847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E798F09725C4FC2B004A8847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E798F09E25C4FC59004A8847 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 		E798F0AD25C514BF004A8847 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,8 +62,8 @@
 		E798F08D25C4FC2A004A8847 /* SampleJsonMenu */ = {
 			isa = PBXGroup;
 			children = (
+				E76FEE8F25C7C0E9000D5631 /* test.json */,
 				E798F0AD25C514BF004A8847 /* Helper.swift */,
-				E798F09E25C4FC59004A8847 /* menu.json */,
 				E798F08E25C4FC2A004A8847 /* SampleJsonMenuApp.swift */,
 				E798F09025C4FC2A004A8847 /* ContentView.swift */,
 				E798F09225C4FC2B004A8847 /* Assets.xcassets */,
@@ -146,7 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E798F09F25C4FC59004A8847 /* menu.json in Resources */,
+				E76FEE9025C7C0E9000D5631 /* test.json in Resources */,
 				E798F09625C4FC2B004A8847 /* Preview Assets.xcassets in Resources */,
 				E798F09325C4FC2B004A8847 /* Assets.xcassets in Resources */,
 			);
