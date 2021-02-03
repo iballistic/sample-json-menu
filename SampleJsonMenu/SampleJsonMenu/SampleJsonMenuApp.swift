@@ -12,6 +12,7 @@ struct SampleJsonMenuApp: App {
     var body: some Scene {
         WindowGroup {
             let config = AppConfigJson()
+            //https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app
             ContentView().environmentObject(config)
         }
     }
