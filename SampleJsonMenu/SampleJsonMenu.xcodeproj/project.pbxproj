@@ -15,7 +15,7 @@
 		E798F09325C4FC2B004A8847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E798F09225C4FC2B004A8847 /* Assets.xcassets */; };
 		E798F09625C4FC2B004A8847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E798F09525C4FC2B004A8847 /* Preview Assets.xcassets */; };
 		E798F0AE25C514BF004A8847 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798F0AD25C514BF004A8847 /* Helper.swift */; };
-		E798F0B725C543E6004A8847 /* swift-json-menu in Frameworks */ = {isa = PBXBuildFile; productRef = E798F0B625C543E6004A8847 /* swift-json-menu */; };
+		E79CBF302760831000885891 /* swift-json-menu in Frameworks */ = {isa = PBXBuildFile; productRef = E79CBF2F2760831000885891 /* swift-json-menu */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E798F0B725C543E6004A8847 /* swift-json-menu in Frameworks */,
+				E79CBF302760831000885891 /* swift-json-menu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 			);
 			name = SampleJsonMenu;
 			packageProductDependencies = (
-				E798F0B625C543E6004A8847 /* swift-json-menu */,
+				E79CBF2F2760831000885891 /* swift-json-menu */,
 			);
 			productName = SampleJsonMenu;
 			productReference = E798F08B25C4FC2A004A8847 /* SampleJsonMenu.app */;
@@ -130,7 +130,7 @@
 			);
 			mainGroup = E798F08225C4FC2A004A8847;
 			packageReferences = (
-				E798F0B525C543E6004A8847 /* XCRemoteSwiftPackageReference "swift-json-menu" */,
+				E79CBF2E2760831000885891 /* XCRemoteSwiftPackageReference "swift-json-menu" */,
 			);
 			productRefGroup = E798F08C25C4FC2A004A8847 /* Products */;
 			projectDirPath = "";
@@ -354,20 +354,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E798F0B525C543E6004A8847 /* XCRemoteSwiftPackageReference "swift-json-menu" */ = {
+		E79CBF2E2760831000885891 /* XCRemoteSwiftPackageReference "swift-json-menu" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/telmanr/Desktop/gitrepos/swift-json-menu";
+			repositoryURL = "https://github.com/iballistic/swift-json-menu";
 			requirement = {
-				branch = dev;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E798F0B625C543E6004A8847 /* swift-json-menu */ = {
+		E79CBF2F2760831000885891 /* swift-json-menu */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E798F0B525C543E6004A8847 /* XCRemoteSwiftPackageReference "swift-json-menu" */;
+			package = E79CBF2E2760831000885891 /* XCRemoteSwiftPackageReference "swift-json-menu" */;
 			productName = "swift-json-menu";
 		};
 /* End XCSwiftPackageProductDependency section */
