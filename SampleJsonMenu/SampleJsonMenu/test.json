@@ -48,7 +48,19 @@
                 "value": "orange",
                 "type": "default"
             }]
-        }
+        },
+        {
+            "format": "",
+            "key": "bottlequantity",
+            "title": "Water Bottles",
+            "celltype": "CellInt",
+            "placeholder": "Number of water bottles",
+            "values": [{
+                "value": "0",
+                "type": "default"
+            }]
+        },
+        
     ],
     "mapping": [
         {
@@ -69,6 +81,13 @@
             "storyboard": "foodmenu",
             "section": "dinner",
             "cell": "tea",
+            "readonly": false,
+            "order": 30
+        },
+        {
+            "storyboard": "foodmenu",
+            "section": "dinner",
+            "cell": "bottlequantity",
             "readonly": false,
             "order": 30
         }

@@ -16,7 +16,7 @@ struct ContentView: View {
         let storyBoardName = "foodmenu"
         let sections = config.data.Section(forStoryboard: storyBoardName)
         
-        NavigationView{
+        NavigationStack{
             List{
                 ForEach(sections!, id: \.self){
                     section in
